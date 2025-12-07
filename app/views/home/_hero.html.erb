@@ -1,0 +1,61 @@
+<!-- Hero Section -->
+<style>
+  @media (max-width: 500px) {
+    .hero-container { flex-direction: column !important; }
+    .hero-text { text-align: left !important; }
+    .hero-buttons { justify-content: center !important; }
+    .hero-image { justify-content: center !important; }
+  }
+  @media (min-width: 501px) and (max-width: 1023px) {
+    .hero-container { flex-direction: row !important; }
+    .hero-text { text-align: left !important; }
+    .hero-buttons { justify-content: flex-start !important; }
+    .hero-image { justify-content: flex-end !important; }
+  }
+  @media (min-width: 1024px) {
+    .hero-container { flex-direction: row !important; }
+    .hero-text { text-align: center !important; }
+    .hero-buttons { justify-content: center !important; }
+    .hero-image { justify-content: flex-end !important; }
+  }
+</style>
+<section class="min-h-screen flex items-center justify-center w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16" style="background-color:rgb(255, 255, 255);">
+  <div class="hero-container w-full max-w-md sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+    
+    <!-- LEFT: Text Content 70% -->
+    <div class="hero-text flex-[7] w-full lg:flex-[7] px-4 sm:px-6 md:px-8 lg:px-10">
+      <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-3 sm:mb-4" style="background: linear-gradient(to right, #2563eb, #9333ea, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: clamp(3rem, 8vw, 8rem); font-weight: 900; letter-spacing: -0.02em;">
+        <strong>Hey</strong> 👋
+      </h1>
+      <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-black mb-3 sm:mb-4" style="font-size: clamp(2rem, 6vw, 6rem);">
+        <span class="text-gray-900">I&apos;m</span> <span class="text-white px-4 py-2 rounded-lg" style="background-color: #22c55e;"><strong>Saahil</strong></span>
+      </h2>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-1500 mb-4 sm:mb-5" style="font-size: clamp(1.5rem, 4vw, 4rem);">
+        Software Engineer
+      </h2>
+      <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+        Backend Engineer building performant, scalable, secure and reliable systems.
+      </p>
+      <div class="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="#projects" class="px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold text-sm sm:text-base">
+          View Projects
+        </a>
+        <a href="#contact" class="px-6 sm:px-8 py-2.5 sm:py-3 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300 transition-colors duration-200 font-semibold text-sm sm:text-base">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Image 30% -->
+    <div class="hero-image flex-[3] lg:flex-[3] flex relative w-full">
+      <%= image_tag "hero-image.jpg", alt: "Saahil", class: "w-full max-w-[12rem] sm:max-w-[14rem] md:max-w-[16rem] lg:max-w-[18rem] xl:max-w-[20rem] 2xl:max-w-[22rem] h-auto object-contain relative" %>
+      <!-- Vanishing border overlays -->
+      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to right, transparent 70%, rgb(255, 255, 255) 100%);"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to left, transparent 70%, rgb(255, 255, 255) 100%);"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, transparent 90%, rgb(255, 255, 255) 100%);"></div>
+      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to bottom, transparent 70%, rgb(255, 255, 255) 100%);"></div>
+    </div>
+    
+  </div>
+</section>
+
